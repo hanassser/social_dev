@@ -1,0 +1,12 @@
+package com.social_dev.social.repository;
+
+import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import com.social_dev.social.models.ERole;
+import com.social_dev.social.models.Role;
+
+@Repository
+public interface RoleRepository extends JpaRepository<Role, Long> {
+    Optional<Role> findByName(ERole name);
+}
